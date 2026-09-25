@@ -12,7 +12,7 @@ export default function DeliverablesSubNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex gap-1 border-b border-[var(--border)] pb-2">
+    <nav className="flex flex-wrap justify-center gap-1 border-b border-[var(--border)] pb-2">
       {SUBTABS.map((tab) => {
         const isActive = pathname === tab.href;
         return (

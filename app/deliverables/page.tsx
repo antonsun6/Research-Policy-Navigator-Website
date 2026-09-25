@@ -33,7 +33,7 @@ const STATUS_STYLES: Record<Deliverable["status"], string> = {
 export default function DeliverablesPage() {
   return (
     <div className="flex flex-col gap-4">
-      <p className="max-w-2xl text-[var(--foreground)]/70">
+      <p className="mx-auto max-w-2xl text-[var(--foreground)]/70">
         One entry per week. Add new weeks to the{" "}
         <code className="rounded bg-[var(--accent-soft)] px-1.5 py-0.5 text-sm">
           DELIVERABLES
@@ -46,11 +46,11 @@ export default function DeliverablesPage() {
         spec) when it needs more than a summary.
       </p>
 
-      <ul className="flex flex-col gap-4">
+      <ul className="mx-auto flex w-full max-w-2xl flex-col gap-4">
         {DELIVERABLES.map((item) => {
           const content = (
             <div className="rounded-2xl border border-[var(--border)] bg-white p-5 shadow-sm transition-shadow hover:shadow-md">
-              <div className="flex flex-wrap items-center gap-2">
+              <div className="flex flex-wrap items-center justify-center gap-2">
                 <span className="text-sm font-medium text-[var(--foreground)]/50">
                   {item.week}
                 </span>

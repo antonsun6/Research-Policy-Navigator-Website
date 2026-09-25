@@ -1,7 +1,7 @@
 export default function ProductSpecificationPage() {
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-wrap items-center justify-center gap-2">
         <span className="text-sm font-medium text-[var(--foreground)]/50">
           Week 1
         </span>
@@ -14,7 +14,7 @@ export default function ProductSpecificationPage() {
         <h2 className="text-2xl font-semibold tracking-tight">
           Product Specification Document
         </h2>
-        <p className="mt-2 max-w-2xl text-[var(--foreground)]/70">
+        <p className="mt-2 mx-auto max-w-2xl text-[var(--foreground)]/70">
           Our first deliverable: the product specification defining project
           scope, goals, and requirements. Replace this placeholder with the
           actual document content, an embedded viewer, or a link out to the
