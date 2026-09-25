@@ -21,9 +21,24 @@ const QUICK_LINKS = [
     description: "Coach check-ins, client meetings, and internal syncs.",
   },
   {
+    href: "/journal",
+    title: "Meetings & Decisions",
+    description: "Summaries of each meeting, decisions made, and action items.",
+  },
+  {
     href: "/deliverables",
-    title: "Weekly Deliverables",
-    description: "What shipped each week, starting with the product spec.",
+    title: "Deliverables",
+    description: "What we've delivered, starting with the product spec.",
+  },
+  {
+    href: "/rules",
+    title: "Team Rules",
+    description: "How our team communicates, meets, and shares work.",
+  },
+  {
+    href: "/links",
+    title: "Related Links",
+    description: "Policy resources, similar projects, and tech references.",
   },
 ];
 

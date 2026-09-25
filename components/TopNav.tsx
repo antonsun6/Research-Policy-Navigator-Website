@@ -7,7 +7,10 @@ const TABS = [
   { href: "/", label: "Overview" },
   { href: "/team", label: "Team & Contacts" },
   { href: "/schedule", label: "Scheduling & Timeline" },
-  { href: "/deliverables", label: "Weekly Deliverables" },
+  { href: "/journal", label: "Meetings & Decisions" },
+  { href: "/deliverables", label: "Deliverables" },
+  { href: "/rules", label: "Team Rules" },
+  { href: "/links", label: "Related Links" },
 ];
 
 export default function TopNav() {
