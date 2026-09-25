@@ -55,7 +55,7 @@ function findPhoto(name: string): string | null {
 function Avatar({ person, photo }: { person: Person; photo: string }) {
   const src = findPhoto(photo);
   return (
-    <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-white bg-[var(--carolina-soft)] ring-1 ring-[var(--border)]">
+    <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-white bg-[var(--carolina-soft)] ring-2 ring-[var(--carolina)] shadow-sm">
       {src ? (
         <Image
           src={src}
@@ -81,7 +81,7 @@ function Avatar({ person, photo }: { person: Person; photo: string }) {
 
 function PersonCard({ person }: { person: Person }) {
   return (
-    <div className="flex w-full flex-col items-center rounded-2xl border border-[var(--border)] bg-white p-6 sm:w-60">
+    <div className="flex w-full flex-col items-center rounded-2xl card-surface p-6 sm:w-60">
       {person.photo && (
         <div className="mb-4">
           <Avatar person={person} photo={person.photo} />
@@ -132,7 +132,7 @@ export default function TeamPage() {
 
       <Roster title="Our Team" people={TEAM}>
         <div className="flex flex-col items-center gap-3">
-          <p className="select-all rounded-lg border border-[var(--border)] bg-white px-3 py-1.5 font-mono text-xs text-[var(--foreground)]/70">
+          <p className="select-all rounded-lg border-[1.5px] border-[var(--card-border)] bg-white px-3 py-1.5 font-mono text-xs text-[var(--foreground)]/70">
             {TEAM_EMAILS}
           </p>
           <div className="flex flex-wrap justify-center gap-2">

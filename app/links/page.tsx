@@ -89,7 +89,7 @@ export default function LinksPage() {
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group block rounded-2xl border border-[var(--border)] bg-white p-5 transition-colors hover:border-[var(--carolina)]"
+                    className="group block rounded-2xl card-surface p-5 transition-colors hover:border-[var(--carolina)]"
                   >
                     <p className="font-semibold text-[var(--navy)]">
                       {link.title}

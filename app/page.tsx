@@ -76,7 +76,7 @@ export default function OverviewPage() {
         </p>
       </section>
 
-      <section className="mx-auto grid w-full max-w-4xl grid-cols-2 overflow-hidden rounded-2xl border border-[var(--border)] bg-white sm:grid-cols-4">
+      <section className="mx-auto grid w-full max-w-4xl grid-cols-2 overflow-hidden rounded-2xl card-surface sm:grid-cols-4">
         {STATS.map((stat, i) => (
           <div
             key={stat.label}
@@ -103,7 +103,7 @@ export default function OverviewPage() {
             <Link
               key={link.href}
               href={link.href}
-              className="group rounded-2xl border border-[var(--border)] bg-white p-6 transition-colors hover:border-[var(--carolina)]"
+              className="group rounded-2xl card-surface p-6 transition-colors hover:border-[var(--carolina)]"
             >
               <h3 className="font-semibold text-[var(--navy)]">
                 {link.title}

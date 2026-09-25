@@ -17,14 +17,13 @@ export default function TopNav() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-white/90 backdrop-blur">
-      <div className="h-1 bg-[var(--navy)]" />
+    <header className="sticky top-0 z-50 bg-[var(--navy)] shadow-[0_1px_0_rgb(255_255_255/0.06),0_4px_16px_-8px_rgb(13_31_58/0.5)]">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 pt-4">
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--navy)] text-xs font-bold text-white">
+          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--carolina)] text-xs font-bold text-white">
             RP
           </span>
-          <span className="text-lg font-semibold tracking-tight text-[var(--navy)]">
+          <span className="text-lg font-semibold tracking-tight text-white">
             Research Policy Navigator
           </span>
         </Link>
@@ -40,8 +39,8 @@ export default function TopNav() {
                 href={tab.href}
                 className={`border-b-2 pb-3 pt-1 text-sm font-medium transition-colors ${
                   isActive
-                    ? "border-[var(--carolina)] text-[var(--navy)]"
-                    : "border-transparent text-[var(--foreground)]/60 hover:text-[var(--navy)]"
+                    ? "border-[var(--carolina)] text-white"
+                    : "border-transparent text-white/65 hover:text-white"
                 }`}
               >
                 {tab.label}
