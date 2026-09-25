@@ -81,7 +81,7 @@ function Avatar({ person, photo }: { person: Person; photo: string }) {
 
 function PersonCard({ person }: { person: Person }) {
   return (
-    <div className="flex w-full flex-col items-center rounded-2xl border border-[var(--border)] bg-white p-6 sm:w-60">
+    <div className="flex w-full flex-col items-center rounded-2xl card-surface p-6 sm:w-60">
       {person.photo && (
         <div className="mb-4">
           <Avatar person={person} photo={person.photo} />

@@ -12,7 +12,7 @@ export default function DeliverablesSubNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-wrap justify-center gap-1 rounded-full border border-[var(--border)] bg-white p-1 self-center">
+    <nav className="flex flex-wrap justify-center gap-1 rounded-full card-surface p-1 self-center">
       {SUBTABS.map((tab) => {
         const isActive = pathname === tab.href;
         return (

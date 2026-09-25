@@ -98,7 +98,7 @@ export default function JournalPage() {
             return (
               <article
                 key={`${entry.date}-${entry.type}`}
-                className="rounded-2xl border border-[var(--border)] bg-white p-6 sm:p-8"
+                className="rounded-2xl card-surface p-6 sm:p-8"
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="text-sm font-semibold text-[var(--navy)]">

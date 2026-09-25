@@ -37,7 +37,7 @@ export default function SchedulePage() {
             return (
               <div
                 key={series.type}
-                className="rounded-2xl border border-[var(--border)] bg-white p-6"
+                className="rounded-2xl card-surface p-6"
               >
                 <span
                   className={`inline-flex items-center gap-2 rounded-full px-3 py-1 text-xs font-medium ${style.badge}`}

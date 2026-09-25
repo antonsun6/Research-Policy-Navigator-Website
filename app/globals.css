@@ -7,9 +7,12 @@
   --carolina-ink: #2b6ea6; /* darker Carolina blue, readable as text */
   --carolina-soft: #eaf3fa;
 
-  --background: #f6f8fb;
+  --navy-deep: #0d1f3a;
+
+  --background: #edf1f6;
+  --surface: #ffffff;
   --foreground: #1a2a44;
-  --border: #e2e8f0;
+  --border: #dbe2ec;
 
   /* Aliases used across components */
   --accent: var(--carolina-ink);
@@ -25,6 +28,15 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, sans-serif);
   -webkit-font-smoothing: antialiased;
+}
+
+/* White card on the tinted page background */
+@utility card-surface {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow:
+    0 1px 2px rgb(19 41 75 / 0.04),
+    0 4px 12px -6px rgb(19 41 75 / 0.08);
 }
 
 html {

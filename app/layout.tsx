@@ -26,7 +26,7 @@ export default function RootLayout({
         <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center">
           {children}
         </main>
-        <footer className="border-t border-[var(--border)] py-6 text-center text-xs text-[var(--foreground)]/50">
+        <footer className="bg-[var(--navy-deep)] py-6 text-center text-xs text-white/60">
           Team A · COMP 523 · UNC Chapel Hill
         </footer>
       </body>

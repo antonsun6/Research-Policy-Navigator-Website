@@ -13,7 +13,7 @@ export default function DeliverablesPage() {
       {DELIVERABLES.map((item) => {
         const content = (
           <div
-            className={`rounded-2xl border border-[var(--border)] bg-white p-6 transition-colors ${
+            className={`rounded-2xl card-surface p-6 transition-colors ${
               item.href ? "hover:border-[var(--carolina)]" : ""
             }`}
           >

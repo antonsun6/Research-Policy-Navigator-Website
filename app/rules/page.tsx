@@ -118,7 +118,7 @@ export default function RulesPage() {
         <section
           key={section.id}
           id={section.id}
-          className="mx-auto w-full max-w-3xl overflow-hidden rounded-2xl border border-[var(--border)] bg-white text-left"
+          className="mx-auto w-full max-w-3xl overflow-hidden rounded-2xl card-surface text-left"
         >
           <header className="border-b border-[var(--border)] border-l-4 border-l-[var(--navy)] bg-[var(--carolina-soft)]/50 px-6 py-5 sm:px-8">
             <h2 className="text-2xl font-semibold tracking-tight text-[var(--navy)]">
