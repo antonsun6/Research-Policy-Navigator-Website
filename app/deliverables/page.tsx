@@ -14,7 +14,8 @@ const DELIVERABLES: Deliverable[] = [
     title: "Product Specification Document",
     status: "Delivered",
     href: "/deliverables/product-specification",
-    summary: "Defines scope, goals, and requirements for the project.",
+    summary:
+      "User stories, functional and non-functional requirements, and interfaces for the Navigator.",
   },
   {
     week: "Week 2",
