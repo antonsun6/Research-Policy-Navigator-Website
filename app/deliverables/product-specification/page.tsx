@@ -11,8 +11,8 @@ export default function ProductSpecificationPage() {
     <div className="flex flex-col gap-10">
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-wrap items-center justify-center gap-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-[var(--foreground)]/50">
-            Week 1
+          <span className="font-mono text-xs font-semibold text-[var(--carolina-ink)]">
+            D1
           </span>
           <span className="rounded-full bg-[var(--carolina-soft)] px-2.5 py-0.5 text-xs font-medium text-[var(--carolina-ink)]">
             Delivered

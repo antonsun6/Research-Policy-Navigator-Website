@@ -1,4 +1,4 @@
-// Product specification content, transcribed from the Week 1 spec document.
+// Product specification content, transcribed from our D1 specification document.
 
 export type SpecItem = {
   id: string;
