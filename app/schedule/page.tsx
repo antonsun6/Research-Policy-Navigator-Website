@@ -19,6 +19,11 @@ const TYPE_STYLES: Record<EventType, { label: string; dot: string; badge: string
     dot: "bg-slate-400",
     badge: "bg-slate-100 text-slate-600",
   },
+  event: {
+    label: "Event",
+    dot: "bg-amber-500",
+    badge: "bg-amber-50 text-amber-700",
+  },
 };
 
 export default function SchedulePage() {

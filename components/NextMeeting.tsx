@@ -7,6 +7,7 @@ const SHORT_LABELS: Record<EventType, string> = {
   client: "Client",
   coach: "Coach",
   team: "Team",
+  event: "Event",
 };
 
 // The next meeting on the timeline (today's counts), read in the browser so
