@@ -1,12 +1,25 @@
 import Link from "next/link";
+import NextMeeting from "@/components/NextMeeting";
 import PageHeader from "@/components/PageHeader";
 import SectionHeading from "@/components/SectionHeading";
+import WeeksIn from "@/components/WeeksIn";
+import {
+  DELIVERABLES,
+  DELIVERED_COUNT,
+  NEXT_DELIVERABLE,
+} from "@/lib/deliverables";
 
-const STATS = [
-  { label: "Team members", value: "4" },
-  { label: "Weeks in", value: "—" },
-  { label: "Deliverables shipped", value: "1" },
-  { label: "Next milestone", value: "TBD" },
+const STATS: { label: string; value: React.ReactNode; small?: boolean }[] = [
+  { label: "Weeks in", value: <WeeksIn /> },
+  { label: "Next meeting", value: <NextMeeting />, small: true },
+  { label: "Deliverables shipped", value: `${DELIVERED_COUNT} of ${DELIVERABLES.length}` },
+  {
+    label: "Next milestone",
+    value: NEXT_DELIVERABLE
+      ? `${NEXT_DELIVERABLE.id} · ${NEXT_DELIVERABLE.title}`
+      : "All delivered",
+    small: true,
+  },
 ];
 
 const QUICK_LINKS = [
@@ -69,7 +82,11 @@ export default function OverviewPage() {
             key={stat.label}
             className={`px-5 py-6 ${i > 0 ? "sm:border-l" : ""} ${i % 2 === 1 ? "border-l" : ""} ${i >= 2 ? "border-t sm:border-t-0" : ""} border-[var(--border)]`}
           >
-            <p className="text-3xl font-semibold tracking-tight text-[var(--navy)]">
+            <p
+              className={`flex min-h-9 items-center justify-center font-semibold tracking-tight text-[var(--navy)] ${
+                stat.small ? "text-lg leading-tight" : "text-3xl"
+              }`}
+            >
               {stat.value}
             </p>
             <p className="mt-1 text-xs font-medium uppercase tracking-wider text-[var(--foreground)]/50">

@@ -1,31 +1,7 @@
 import Link from "next/link";
+import { DELIVERABLES, type DeliverableStatus } from "@/lib/deliverables";
 
-type Deliverable = {
-  week: string;
-  title: string;
-  status: "Delivered" | "In Progress" | "Planned";
-  href?: string;
-  summary: string;
-};
-
-const DELIVERABLES: Deliverable[] = [
-  {
-    week: "Week 1",
-    title: "Product Specification Document",
-    status: "Delivered",
-    href: "/deliverables/product-specification",
-    summary:
-      "User stories, functional and non-functional requirements, and interfaces for the Navigator.",
-  },
-  {
-    week: "Week 2",
-    title: "TBD",
-    status: "Planned",
-    summary: "Add next week's deliverable here.",
-  },
-];
-
-const STATUS_STYLES: Record<Deliverable["status"], string> = {
+const STATUS_STYLES: Record<DeliverableStatus, string> = {
   Delivered: "bg-[var(--carolina-soft)] text-[var(--carolina-ink)]",
   "In Progress": "bg-amber-100 text-amber-700",
   Planned: "bg-slate-100 text-slate-500",
@@ -42,8 +18,8 @@ export default function DeliverablesPage() {
             }`}
           >
             <div className="flex flex-wrap items-center justify-center gap-2">
-              <span className="text-xs font-semibold uppercase tracking-wider text-[var(--foreground)]/50">
-                {item.week}
+              <span className="font-mono text-xs font-semibold text-[var(--carolina-ink)]">
+                {item.id}
               </span>
               <span
                 className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${STATUS_STYLES[item.status]}`}
@@ -64,7 +40,7 @@ export default function DeliverablesPage() {
         );
 
         return (
-          <li key={item.title}>
+          <li key={item.id}>
             {item.href ? <Link href={item.href}>{content}</Link> : content}
           </li>
         );
