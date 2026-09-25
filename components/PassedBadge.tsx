@@ -19,7 +19,7 @@ export default function PassedBadge({ date }: { date: string }) {
   if (!today || date >= today) return null;
 
   return (
-    <span className="rounded-full bg-[var(--foreground)]/10 px-2.5 py-0.5 text-xs font-medium text-[var(--foreground)]/60">
+    <span className="rounded-full bg-slate-100 px-2 py-0.5 text-xs font-medium text-slate-500">
       Passed
     </span>
   );

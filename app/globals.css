@@ -1,15 +1,32 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f7f5;
-  --foreground: #1c1c1e;
-  --accent: #2563eb;
-  --accent-soft: #dbeafe;
-  --border: #e5e5e0;
+  /* UNC palette */
+  --navy: #13294b;
+  --carolina: #4b9cd3;
+  --carolina-ink: #2b6ea6; /* darker Carolina blue, readable as text */
+  --carolina-soft: #eaf3fa;
+
+  --background: #f6f8fb;
+  --foreground: #1a2a44;
+  --border: #e2e8f0;
+
+  /* Aliases used across components */
+  --accent: var(--carolina-ink);
+  --accent-soft: var(--carolina-soft);
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-sans);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans, ui-sans-serif, system-ui, -apple-system, sans-serif);
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
 }
