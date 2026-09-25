@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
-import TopNav from "@/components/TopNav";
+import AppShell from "@/components/AppShell";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -21,14 +21,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={geist.variable}>
-      <body className="flex min-h-screen flex-col">
-        <TopNav />
-        <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center">
-          {children}
-        </main>
-        <footer className="bg-[var(--navy-deep)] py-6 text-center text-xs text-white/60">
-          Team A · COMP 523 · UNC Chapel Hill
-        </footer>
+      <body className="min-h-screen">
+        <AppShell>
+          <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center">
+            {children}
+          </main>
+          <footer className="bg-[var(--navy-deep)] py-6 text-center text-xs text-white/60">
+            Team A · COMP 523 · UNC Chapel Hill
+          </footer>
+        </AppShell>
       </body>
     </html>
   );
