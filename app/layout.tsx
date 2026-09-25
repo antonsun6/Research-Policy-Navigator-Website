@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={geist.variable}>
+    <html lang="en" className={geist.variable} suppressHydrationWarning>
       <body className="min-h-screen">
         <AppShell>
           <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center">

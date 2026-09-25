@@ -1,6 +1,7 @@
 // Meeting schedule shared by the Scheduling & Timeline page and the home page.
 
-export type EventType = "coach" | "client" | "team";
+// "event" is for one-off events of major importance (demos, reviews, etc.).
+export type EventType = "coach" | "client" | "team" | "event";
 
 export type TimelineEvent = {
   date: string; // YYYY-MM-DD
@@ -55,7 +56,15 @@ const TBD_DATES: Record<string, string> = {
 };
 
 // One-off meetings that don't follow a series (e.g. a rescheduled or extra meeting).
-const EXTRA_EVENTS: TimelineEvent[] = [];
+const EXTRA_EVENTS: TimelineEvent[] = [
+  {
+    date: "2026-10-30",
+    time: "TBD",
+    title: "Quarterly meeting",
+    type: "event",
+    tbd: "potential POC showcase",
+  },
+];
 
 function addDays(date: string, days: number): string {
   const d = new Date(`${date}T00:00:00Z`);

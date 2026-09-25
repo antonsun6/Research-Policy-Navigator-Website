@@ -34,7 +34,8 @@ const CLIENT: Person[] = [
 ];
 
 const COACH: Person[] = [
-  { name: "Vinir Rai", email: "vinirrai@unc.edu" },
+  { name: "Vinir Rai", role: "Coach", email: "vinirrai@unc.edu" },
+  { name: "Dr. David Stotts", role: "Professor", email: "stotts@cs.unc.edu" },
 ];
 
 const TEAM_EMAILS = TEAM.map((person) => person.email).join(", ");
@@ -127,7 +128,7 @@ export default function TeamPage() {
   return (
     <div className="flex flex-col gap-16">
       <PageHeader eyebrow="Team & Contacts" title="Who's involved">
-        Our development team, our client at UNC Research, and our course coach.
+        Our development team, our client at UNC Research, and our course coach and professor.
       </PageHeader>
 
       <Roster title="Our Team" people={TEAM}>
@@ -147,7 +148,7 @@ export default function TeamPage() {
         </div>
       </Roster>
       <Roster title="Client" people={CLIENT} />
-      <Roster title="Coach / Advisor" people={COACH} />
+      <Roster title="Coach & Professor" people={COACH} />
     </div>
   );
 }
