@@ -1,4 +1,6 @@
 import CopyButton from "@/components/CopyButton";
+import PageHeader from "@/components/PageHeader";
+import SectionHeading from "@/components/SectionHeading";
 
 type Person = {
   name: string;
@@ -28,16 +30,28 @@ const COACH: Person[] = [
 
 const TEAM_EMAILS = TEAM.map((person) => person.email).join(", ");
 
+function initials(name: string): string {
+  return name
+    .split(" ")
+    .map((part) => part[0])
+    .join("")
+    .slice(0, 2)
+    .toUpperCase();
+}
+
 function PersonCard({ person }: { person: Person }) {
   return (
-    <div className="w-full rounded-2xl border border-[var(--border)] bg-white p-5 shadow-sm sm:w-72">
-      <p className="font-semibold">{person.name}</p>
+    <div className="flex w-full flex-col items-center rounded-2xl border border-[var(--border)] bg-white p-6 sm:w-60">
+      <span className="flex h-12 w-12 items-center justify-center rounded-full bg-[var(--carolina-soft)] text-sm font-semibold text-[var(--navy)]">
+        {initials(person.name)}
+      </span>
+      <p className="mt-3 font-semibold text-[var(--navy)]">{person.name}</p>
       {person.role && (
-        <p className="text-sm text-[var(--foreground)]/60">{person.role}</p>
+        <p className="mt-0.5 text-sm text-[var(--foreground)]/60">{person.role}</p>
       )}
       <a
         href={`mailto:${person.email}`}
-        className="mt-2 inline-block text-sm text-[var(--accent)] hover:underline"
+        className="mt-2 text-sm text-[var(--carolina-ink)] hover:underline"
       >
         {person.email}
       </a>
@@ -55,9 +69,9 @@ function Roster({
   children?: React.ReactNode;
 }) {
   return (
-    <section>
-      <h2 className="text-lg font-semibold">{title}</h2>
-      <div className="mt-4 flex flex-wrap justify-center gap-4">
+    <section className="flex flex-col gap-6">
+      <SectionHeading>{title}</SectionHeading>
+      <div className="flex flex-wrap justify-center gap-4">
         {people.map((person) => (
           <PersonCard key={person.email} person={person} />
         ))}
@@ -69,33 +83,20 @@ function Roster({
 
 export default function TeamPage() {
   return (
-    <div className="flex flex-col gap-12">
-      <section>
-        <p className="text-sm font-medium uppercase tracking-wide text-[var(--accent)]">
-          Team & Contacts
-        </p>
-        <h1 className="mt-2 text-3xl font-semibold tracking-tight">
-          Who&apos;s involved
-        </h1>
-        <p className="mt-4 mx-auto max-w-2xl text-[var(--foreground)]/70">
-          Project team, client contact, and coach/advisor info. Update the
-          roster arrays in{" "}
-          <code className="rounded bg-[var(--accent-soft)] px-1.5 py-0.5 text-sm">
-            app/team/page.tsx
-          </code>{" "}
-          as the team is finalized.
-        </p>
-      </section>
+    <div className="flex flex-col gap-16">
+      <PageHeader eyebrow="Team & Contacts" title="Who's involved">
+        Our development team, our client at UNC Research, and our course coach.
+      </PageHeader>
 
       <Roster title="Our Team" people={TEAM}>
-        <div className="mt-6 flex flex-col items-center gap-3">
-          <p className="select-all rounded-lg bg-[var(--accent-soft)] px-3 py-1.5 text-sm">
+        <div className="flex flex-col items-center gap-3">
+          <p className="select-all rounded-lg border border-[var(--border)] bg-white px-3 py-1.5 font-mono text-xs text-[var(--foreground)]/70">
             {TEAM_EMAILS}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
             <a
               href={`mailto:${TEAM.map((person) => person.email).join(",")}`}
-              className="rounded-full bg-[var(--accent)] px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
+              className="rounded-full bg-[var(--navy)] px-4 py-2 text-sm font-medium text-white transition-opacity hover:opacity-90"
             >
               Email the whole team
             </a>

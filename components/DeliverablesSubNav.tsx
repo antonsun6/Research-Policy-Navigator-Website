@@ -12,17 +12,17 @@ export default function DeliverablesSubNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-wrap justify-center gap-1 border-b border-[var(--border)] pb-2">
+    <nav className="flex flex-wrap justify-center gap-1 rounded-full border border-[var(--border)] bg-white p-1 self-center">
       {SUBTABS.map((tab) => {
         const isActive = pathname === tab.href;
         return (
           <Link
             key={tab.href}
             href={tab.href}
-            className={`rounded-full px-3.5 py-1.5 text-sm font-medium transition-colors ${
+            className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
               isActive
-                ? "bg-[var(--foreground)] text-white"
-                : "text-[var(--foreground)]/60 hover:bg-[var(--accent-soft)] hover:text-[var(--accent)]"
+                ? "bg-[var(--navy)] text-white"
+                : "text-[var(--foreground)]/60 hover:text-[var(--navy)]"
             }`}
           >
             {tab.label}
