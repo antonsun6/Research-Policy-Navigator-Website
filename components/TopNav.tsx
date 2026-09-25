@@ -15,11 +15,11 @@ export default function TopNav() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-white/80 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl flex-col items-center gap-3 px-6 py-4">
         <Link href="/" className="text-lg font-semibold tracking-tight">
           Research Policy Navigator
         </Link>
-        <nav className="flex gap-1">
+        <nav className="flex flex-wrap justify-center gap-1">
           {TABS.map((tab) => {
             const isActive =
               tab.href === "/"

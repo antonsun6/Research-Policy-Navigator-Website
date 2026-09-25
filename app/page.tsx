@@ -30,15 +30,27 @@ export default function OverviewPage() {
     <div className="flex flex-col gap-12">
       <section>
         <p className="text-sm font-medium uppercase tracking-wide text-[var(--accent)]">
-          Project Overview
+          Team A - COMP 523
         </p>
         <h1 className="mt-2 text-4xl font-semibold tracking-tight">
           Research Policy Navigator
         </h1>
-        <p className="mt-4 max-w-2xl text-base text-[var(--foreground)]/70">
-          A one-page home base for the project: who&apos;s involved, what&apos;s
-          scheduled, and what we&apos;ve delivered so far. Replace this summary
-          with a short description of the project&apos;s goals and scope.
+        <p className="mx-auto mt-4 max-w-2xl text-base text-[var(--foreground)]/70">
+          An AI-assisted policy navigator helping UNC researchers get fast,
+          source-grounded answers to compliance questions.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold tracking-tight">Our Project</h2>
+        <p className="mx-auto mt-4 max-w-3xl text-base text-[var(--foreground)]/70">
+          The Research Policy Navigator is a web application designed to help
+          UNC researchers quickly find and understand research-related
+          policies and guidance. Instead of searching across numerous policy
+          documents, websites, FAQs, and resources, researchers can ask
+          questions in plain language and receive concise, source-grounded
+          answers with citations and links to the relevant UNC Research
+          materials.
         </p>
       </section>
 
