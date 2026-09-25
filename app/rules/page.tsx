@@ -67,7 +67,7 @@ const SECTIONS: RuleSection[] = [
             ],
           },
           {
-            text: "Formatting and linting are automated, not left to manual review: Black and Ruff (or flake8) for Python, Prettier and ESLint for JS/TS, enforced by a pre-commit hook or CI check.",
+            text: "Formatting and linting are automated, not left to manual review: Black and flake8 for Python, Prettier and ESLint for JS/TS, enforced by a pre-commit hook or CI check.",
           },
           {
             text: "Both style guides are linked in the project repository's README.",
