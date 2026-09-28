@@ -58,6 +58,12 @@ const TBD_DATES: Record<string, string> = {
 // One-off meetings that don't follow a series (e.g. a rescheduled or extra meeting).
 const EXTRA_EVENTS: TimelineEvent[] = [
   {
+    date: "2026-09-28",
+    time: "1:25 – 2:40 PM",
+    title: "Team meeting",
+    type: "team",
+  },
+  {
     date: "2026-10-30",
     time: "TBD",
     title: "Quarterly meeting",
