@@ -9,7 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Research Policy Navigator",
+  title: "Nora the Policy Navigator",
   description:
     "An AI-assisted policy navigator helping UNC researchers get fast, source-grounded answers to compliance questions.",
 };

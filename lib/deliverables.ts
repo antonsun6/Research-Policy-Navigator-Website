@@ -18,7 +18,7 @@ export const DELIVERABLES: Deliverable[] = [
     status: "Delivered",
     href: "/deliverables/product-specification",
     summary:
-      "User stories, functional and non-functional requirements, and interfaces for the Navigator.",
+      "User stories, functional and non-functional requirements, and interfaces for Nora.",
   },
   {
     id: "D2",
@@ -39,14 +39,14 @@ export const DELIVERABLES: Deliverable[] = [
     title: "User Manual",
     status: "Planned",
     summary:
-      "Our documentation plan, plus guides for researchers using the Navigator and administrators deploying and managing it, with how-to videos for our client.",
+      "Our documentation plan, plus guides for researchers using Nora and administrators deploying and managing it, with how-to videos for our client.",
   },
   {
     id: "D5",
     title: "Code",
     status: "Planned",
     summary:
-      "The Navigator's source code on GitHub, consistently styled and documented, with a README explaining how to install and run it.",
+      "Nora's source code on GitHub, consistently styled and documented, with a README explaining how to install and run it.",
   },
 ];
 

@@ -77,11 +77,11 @@ export default function AppShell({
           </svg>
         </button>
         <Link href="/" className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--carolina)] text-xs font-bold text-white">
-            RP
+          <span className="flex h-7 w-7 items-center justify-center rounded-md bg-[var(--carolina)] text-sm font-bold text-white">
+            N
           </span>
           <span className="text-lg font-semibold tracking-tight text-white">
-            Research Policy Navigator
+            Nora the Policy Navigator
           </span>
         </Link>
       </header>

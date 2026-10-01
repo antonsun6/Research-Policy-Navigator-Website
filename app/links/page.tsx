@@ -42,7 +42,13 @@ const CATEGORIES: LinkCategory[] = [
         title: "UNC Policy Knowledge Base: Research",
         url: "https://policies.unc.edu/TDClient/2833/Portal/KB/Category/21680/Research",
         description:
-          "UNC's research policy repository, the source material for the Navigator.",
+          "UNC's research policy repository, the source material for Nora.",
+      },
+      {
+        title: "UNC Research branding",
+        url: "https://research.unc.edu/news/branding/",
+        description:
+          "Official UNC Research logos, images, and brand guidelines for Nora's UI.",
       },
     ],
   },
@@ -52,7 +58,7 @@ const CATEGORIES: LinkCategory[] = [
       {
         title: "Project code repository",
         url: "https://github.com/jerrywen2005/UNC-Research-Policy-Navigator",
-        description: "GitHub repository for the Research Policy Navigator app.",
+        description: "GitHub repository for Nora.",
       },
       {
         title: "Team website repository",

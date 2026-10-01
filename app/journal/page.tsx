@@ -29,6 +29,46 @@ const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
 // entries are shown newest first.
 const ENTRIES: JournalEntry[] = [
   {
+    date: "2026-09-29",
+    type: "client",
+    title: "UI direction and dashboard requirements with Jeanne Lovmo",
+    summary:
+      "Jeanne set direction for Nora's look and the admin dashboard, gave the project a new name, and scheduled the Steering Group showcase.",
+    keyPoints: [
+      "Must-have dashboard features (the rest is up to us): top topics being asked; answers delivered vs. referred to an office; the number and types of questions; questions that couldn't be answered confidently; user activity, i.e. how much the tool is used; and feedback analytics.",
+      "Open question: whether to create subtopics within the policy categories.",
+    ],
+    decisions: [
+      "The project's new name is Nora the Policy Navigator.",
+      "Keep UNC colors and a simple design, using UNC Research's official branding page for images and logos.",
+      "Analytics data should be downloadable.",
+      "The showcase will be for the Steering Group on Nov 19, 3–4 PM, replacing the tentative Oct 30 showcase.",
+    ],
+    actionItems: [
+      { task: "Plan the Steering Group showcase for Nov 19." },
+      { task: "Decide whether to add subtopics within the policy categories." },
+    ],
+  },
+  {
+    date: "2026-09-28",
+    type: "team",
+    title: "Codebase setup and project architecture",
+    summary:
+      "Set up Nora's codebase, its file and project architecture, and the repository workflow, and updated the team website.",
+    keyPoints: [
+      "Backend: FastAPI skeleton with a SQLAlchemy and Alembic database layer; the first migration enables pgvector for retrieval.",
+      "Frontend: React and TypeScript app scaffolded with Vite, which forwards /api requests to FastAPI during development.",
+      "Docker: Dockerfiles for the backend and frontend (with dev and prod targets) and a Docker Compose stack for local development.",
+      "CI: a GitHub Actions workflow builds the backend, frontend, and Docker images.",
+      "Documentation: a README covering setup, architecture, and workflow, plus a CLAUDE.md with shared project context for Claude Code.",
+    ],
+    decisions: [
+      "Branch flow is dev → qa → main, enforced by a GitHub workflow.",
+      "PostgreSQL with pgvector stores the policy data for retrieval.",
+      "Local development runs through Docker Compose.",
+    ],
+  },
+  {
     date: "2026-09-15",
     type: "client",
     title: "Project kickoff with Jeanne Lovmo",
@@ -38,7 +78,7 @@ const ENTRIES: JournalEntry[] = [
       "Goals: save researchers time, organize policy information, and make it easier to navigate.",
       "Content comes from the UNC Policy Knowledge Base, organized into 9 categories, with fewer than 200 documents in the repository.",
       "Researcher flow: sign in with Onyen, browse or search a topic, ask a question, and receive guidance.",
-      "Researchers should be able to ask plain-language questions and get clear answers, and the Navigator must recognize when it shouldn't give an answer.",
+      "Researchers should be able to ask plain-language questions and get clear answers, and Nora must recognize when it shouldn't give an answer.",
       "Admin side: a quick view of what researchers are searching for, common struggle points, unanswerable questions (gaps in current policy coverage), and helpfulness feedback, which is important metadata for training, education, and workshops.",
     ],
   },

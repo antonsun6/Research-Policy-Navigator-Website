@@ -23,7 +23,7 @@ export default function ProductSpecificationPage() {
         </h2>
         <p className="mx-auto max-w-2xl text-[var(--foreground)]/70">
           User stories, functional and non-functional requirements, and
-          interfaces for the Research Policy Navigator. Requirements are
+          interfaces for Nora. Requirements are
           prioritized as Definite, Perhaps, or Improbable.
         </p>
 

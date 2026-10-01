@@ -64,11 +64,10 @@ const EXTRA_EVENTS: TimelineEvent[] = [
     type: "team",
   },
   {
-    date: "2026-10-30",
-    time: "TBD",
-    title: "Quarterly meeting",
+    date: "2026-11-19",
+    time: "3:00 – 4:00 PM",
+    title: "Steering Group showcase",
     type: "event",
-    tbd: "potential POC showcase",
   },
 ];
 
@@ -86,6 +85,16 @@ export function formatDate(date: string): string {
     year: "numeric",
     timeZone: "UTC",
   });
+}
+
+// Minutes after midnight that a time like "2:30 – 3:00 PM" starts, used to
+// order meetings on the same day. "TBD" times sort to the end of the day.
+function startMinutes(time: string): number {
+  const match = time.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)?/i);
+  if (!match) return 24 * 60;
+  const period = (match[3] ?? time.match(/(AM|PM)\s*$/i)?.[1] ?? "AM").toUpperCase();
+  const hours = (Number(match[1]) % 12) + (period === "PM" ? 12 : 0);
+  return hours * 60 + Number(match[2]);
 }
 
 function buildTimeline(): TimelineEvent[] {
@@ -106,7 +115,10 @@ function buildTimeline(): TimelineEvent[] {
       });
     }
   }
-  return events.sort((a, b) => a.date.localeCompare(b.date));
+  return events.sort(
+    (a, b) =>
+      a.date.localeCompare(b.date) || startMinutes(a.time) - startMinutes(b.time),
+  );
 }
 
 export const EVENTS = buildTimeline();
