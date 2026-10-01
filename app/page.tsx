@@ -58,7 +58,7 @@ const QUICK_LINKS = [
 export default function OverviewPage() {
   return (
     <div className="flex flex-col gap-16">
-      <PageHeader eyebrow="Team A - COMP 523" title="Research Policy Navigator">
+      <PageHeader eyebrow="Team A - COMP 523" title="Nora the Policy Navigator">
         An AI-assisted policy navigator helping UNC researchers get fast,
         source-grounded answers to compliance questions.
       </PageHeader>
@@ -66,7 +66,7 @@ export default function OverviewPage() {
       <section className="mx-auto flex max-w-3xl flex-col gap-5">
         <SectionHeading>Our Project</SectionHeading>
         <p className="text-base leading-relaxed text-[var(--foreground)]/75">
-          The Research Policy Navigator is a web application designed to help
+          Nora is a web application designed to help
           UNC researchers quickly find and understand research-related
           policies and guidance. Instead of searching across numerous policy
           documents, websites, FAQs, and resources, researchers can ask

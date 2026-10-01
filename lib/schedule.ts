@@ -64,11 +64,10 @@ const EXTRA_EVENTS: TimelineEvent[] = [
     type: "team",
   },
   {
-    date: "2026-10-30",
-    time: "TBD",
-    title: "Quarterly meeting",
+    date: "2026-11-19",
+    time: "3:00 – 4:00 PM",
+    title: "Steering Group showcase",
     type: "event",
-    tbd: "potential POC showcase",
   },
 ];
 
