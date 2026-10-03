@@ -98,7 +98,7 @@ export const MILESTONES: Deliverable[] = [
   {
     id: "M5",
     title: "System Metaphor",
-    status: "Planned",
+    status: "Delivered",
     href: "/deliverables/system-metaphor",
     summary: "A shared mental model of how Nora works, for the team and our client.",
   },
