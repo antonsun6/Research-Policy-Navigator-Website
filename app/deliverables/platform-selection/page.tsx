@@ -50,10 +50,10 @@ export default function PlatformSelectionPage() {
       <div className="flex flex-col items-center gap-4">
         <div className="flex flex-wrap items-center justify-center gap-2">
           <span className="font-mono text-xs font-semibold text-[var(--carolina-ink)]">
-            D2
+            M6
           </span>
-          <span className="text-xs font-medium text-[var(--foreground)]/60">
-            Part of the Design Document
+          <span className="rounded-full bg-amber-100 px-2.5 py-0.5 text-xs font-medium text-amber-700">
+            In Progress
           </span>
         </div>
         <h2 className="text-2xl font-semibold tracking-tight text-[var(--navy)]">
@@ -63,7 +63,7 @@ export default function PlatformSelectionPage() {
           The technologies we use to build Nora, the alternatives we
           considered for each, and why we chose what we did. We first listed
           the alternatives, then compared their trade-offs and made a
-          selection. This becomes part of our design document.
+          selection. This milestone feeds into our design document (D2).
         </p>
         <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-xs text-[var(--foreground)]/60">
           {(["Selected", "Proposed", "Open"] as const).map((s) => (
