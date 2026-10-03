@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 const SUBTABS = [
   { href: "/deliverables", label: "All Deliverables" },
   { href: "/deliverables/product-specification", label: "Product Specification" },
+  { href: "/deliverables/platform-selection", label: "Platform Selection" },
 ];
 
 export default function DeliverablesSubNav() {
