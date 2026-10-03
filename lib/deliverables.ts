@@ -113,7 +113,7 @@ export const MILESTONES: Deliverable[] = [
   {
     id: "M7",
     title: "Architecture Diagram",
-    status: "Planned",
+    status: "In Progress",
     href: "/deliverables/architecture-diagram",
     summary: "How Nora's frontend, backend, database, and external services fit together.",
   },
