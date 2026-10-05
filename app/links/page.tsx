@@ -70,6 +70,11 @@ const CATEGORIES: LinkCategory[] = [
         url: "https://docs.google.com/document/d/1562NoqD9J1R6apC7jzX5-mpf5bDjDKMDAfLQm35i0H4/edit?usp=sharing",
         description: "Our shared Google Doc with project and team materials.",
       },
+      {
+        title: "Team presentation",
+        url: "https://docs.google.com/presentation/d/1GuRE6Fun3bqSqhxmSSWdqnYrIDVIcVi9l0g0fTJ22U4/edit?usp=sharing",
+        description: "Our Google Slides deck for class presentations.",
+      },
     ],
   },
 ];
