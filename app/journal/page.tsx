@@ -45,7 +45,7 @@ const ENTRIES: JournalEntry[] = [
     actionItems: [
       { owner: "Anton", task: "Assign an owner to every action item in the journal." },
       { owner: "Anton", task: "Add a team meeting to the website." },
-      { owner: "TBD", task: "Add an Assignments tab with the ethics assignment." },
+      { owner: "Anton", task: "Add an Assignments tab with the ethics assignment." },
       { owner: "TBD", task: "Email ITS about getting the OKD environment for hosting, CC Vinir." },
       { owner: "Everyone", task: "Prepare a demo video of 2 workflows, due Wed, Oct 14 at 11:59 PM." },
     ],
