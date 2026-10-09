@@ -44,6 +44,11 @@ const QUICK_LINKS = [
     description: "What we've delivered, starting with the product spec.",
   },
   {
+    href: "/assignments",
+    title: "Assignments",
+    description: "Other COMP 523 assignments, like the ethics assignment.",
+  },
+  {
     href: "/rules",
     title: "Team Rules",
     description: "How our team communicates, meets, and shares work.",

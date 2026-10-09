@@ -42,8 +42,8 @@ export const SERIES: MeetingSeries[] = [
   {
     type: "team",
     title: "Team meeting",
-    cadence: "Not scheduled yet",
-    time: "TBD",
+    cadence: "As needed",
+    time: "Scheduled ad hoc; see the timeline for dates",
   },
 ];
 
@@ -62,6 +62,12 @@ const EXTRA_EVENTS: TimelineEvent[] = [
     time: "1:25 – 2:40 PM",
     title: "Team meeting",
     type: "team",
+  },
+  {
+    date: "2026-10-14",
+    time: "11:59 PM",
+    title: "Demo video due (2 workflows)",
+    type: "event",
   },
   {
     date: "2026-11-19",
