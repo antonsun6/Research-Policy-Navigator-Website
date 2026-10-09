@@ -29,6 +29,50 @@ const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
 // entries are shown newest first.
 const ENTRIES: JournalEntry[] = [
   {
+    date: "2026-10-08",
+    type: "coach",
+    title: "Coach meeting with Vinir Rai",
+    summary:
+      "Followed up on journal action items, discussed hosting through ITS, and set requirements for next week's demo.",
+    keyPoints: [
+      "Demo requirements: target at least one core functionality, use dummy data, and show at least two workflows. Hard deadline for the demo video is Wed, Oct 14 at 11:59 PM.",
+      "The ethics assignment is due in two weeks.",
+    ],
+    decisions: [
+      "Every journal action item gets an owner; pairs are fine.",
+      "Pursue the OKD environment (OpenShift on Carolina CloudApps) through ITS for hosting.",
+    ],
+    actionItems: [
+      { owner: "Anton", task: "Assign an owner to every action item in the journal." },
+      { owner: "Anton", task: "Add a team meeting to the website." },
+      { owner: "Anton", task: "Add an Assignments tab with the ethics assignment." },
+      { owner: "TBD", task: "Email ITS about getting the OKD environment for hosting, CC Vinir." },
+      { owner: "Everyone", task: "Prepare a demo video of 2 workflows, due Wed, Oct 14 at 11:59 PM." },
+    ],
+  },
+  {
+    date: "2026-10-01",
+    type: "coach",
+    title: "Coach meeting with Vinir Rai",
+    summary:
+      "Reviewed this week's milestones, discussed deployment options, and planned the first check-in demo.",
+    keyPoints: [
+      "Deployment options: UNC CloudApps or GitHub Pages.",
+      "Discussed the three milestones due Saturday, Oct 3: the architecture diagram, system metaphor, and platform selection.",
+      "First check-in demo is in two weeks.",
+    ],
+    decisions: ["Every journal action item must be assigned to a person."],
+    actionItems: [
+      { owner: "Anton", task: "Fill out the team meeting box on the website." },
+      { owner: "Anton", task: "Assign a person to every action item in the journal." },
+      { owner: "Jerry", task: "Architecture diagram, due Sat, Oct 3." },
+      { owner: "Jerry", task: "Platform selection, due Sat, Oct 3." },
+      { owner: "Andy", task: "System metaphor, due Sat, Oct 3." },
+      { owner: "Adithi", task: "Prepare midterm talk slides." },
+      { owner: "Everyone", task: "Prepare for the first check-in demo in two weeks." },
+    ],
+  },
+  {
     date: "2026-09-29",
     type: "client",
     title: "UI direction and dashboard requirements with Jeanne Lovmo",

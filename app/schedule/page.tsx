@@ -26,6 +26,11 @@ const TYPE_STYLES: Record<EventType, { label: string; dot: string; badge: string
   },
 };
 
+// Series start, or for ad hoc meetings the earliest one on the timeline.
+function firstMeeting(series: (typeof SERIES)[number]): string | undefined {
+  return series.start ?? EVENTS.find((event) => event.type === series.type)?.date;
+}
+
 export default function SchedulePage() {
   return (
     <div className="flex flex-col gap-16">
@@ -54,9 +59,9 @@ export default function SchedulePage() {
                   {series.cadence}
                 </p>
                 <p className="text-sm text-[var(--foreground)]/60">{series.time}</p>
-                {series.start && (
+                {firstMeeting(series) && (
                   <p className="mt-3 text-xs text-[var(--foreground)]/50">
-                    First meeting: {formatDate(series.start)}
+                    First meeting: {formatDate(firstMeeting(series)!)}
                   </p>
                 )}
               </div>
