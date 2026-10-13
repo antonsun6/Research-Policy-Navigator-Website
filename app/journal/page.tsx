@@ -29,6 +29,36 @@ const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
 // entries are shown newest first.
 const ENTRIES: JournalEntry[] = [
   {
+    date: "2026-10-11",
+    type: "team",
+    title: "Demo workflows and task split",
+    summary:
+      "Defined the two workflows we'll demo, set up the database and backend schemas and all documentation, and split the demo work into four tasks.",
+    keyPoints: [
+      "Defined our two workflows that we will demo.",
+      "Set up the database and backend schemas.",
+      "Set up all documentation.",
+    ],
+    actionItems: [
+      {
+        owner: "Anton",
+        task: "Content and search backend: build the offices, topics, and documents tables and migration, seed the 9 categories with about 15 cited policy excerpts, and serve them through /api/topics and full-text /api/documents?topic=&q=, with keyword-only /api/ask as a stretch goal.",
+      },
+      {
+        owner: "Adithi",
+        task: "Frontend researcher pages: build the researcher home with Browse, Search, and Ask given equal weight, topic cards that open a document list, and a search box whose results show each citation and source link.",
+      },
+      {
+        owner: "Andy",
+        task: "Frontend shell, sign-in, and admin mockup: set up the router, layout, and theme, build the sign-in page that sends each user to the researcher home or admin page by role, and guard the admin routes in front of a stub admin page.",
+      },
+      {
+        owner: "Jerry",
+        task: "Auth backend: build the users table and migration, the seed users researcher1 and admin1, the mock-login, logout, and /api/me endpoints, and a require_role(\"admin\") check that returns 403 to researchers.",
+      },
+    ],
+  },
+  {
     date: "2026-10-08",
     type: "coach",
     title: "Coach meeting with Vinir Rai",

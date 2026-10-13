@@ -16,7 +16,8 @@ export type MeetingSeries = {
   title: string;
   cadence: string;
   time: string;
-  // First meeting (YYYY-MM-DD) and weeks between meetings; omit if not scheduled yet.
+  // First meeting (YYYY-MM-DD) and weeks between meetings. Without everyWeeks
+  // the series isn't added to the timeline; list its meetings in EXTRA_EVENTS.
   start?: string;
   everyWeeks?: number;
 };
@@ -42,8 +43,9 @@ export const SERIES: MeetingSeries[] = [
   {
     type: "team",
     title: "Team meeting",
-    cadence: "As needed",
-    time: "Scheduled ad hoc; see the timeline for dates",
+    cadence: "Weekly, Sundays",
+    time: "8:00 – 9:00 PM",
+    start: "2026-09-28",
   },
 ];
 
@@ -60,6 +62,12 @@ const EXTRA_EVENTS: TimelineEvent[] = [
   {
     date: "2026-09-28",
     time: "1:25 – 2:40 PM",
+    title: "Team meeting",
+    type: "team",
+  },
+  {
+    date: "2026-10-11",
+    time: "8:00 – 9:00 PM",
     title: "Team meeting",
     type: "team",
   },
