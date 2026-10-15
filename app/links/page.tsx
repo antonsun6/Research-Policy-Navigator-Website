@@ -75,6 +75,11 @@ const CATEGORIES: LinkCategory[] = [
         url: "https://docs.google.com/presentation/d/1GuRE6Fun3bqSqhxmSSWdqnYrIDVIcVi9l0g0fTJ22U4/edit?usp=sharing",
         description: "Our Google Slides deck for class presentations.",
       },
+      {
+        title: "Website demo video",
+        url: "https://www.youtube.com/watch?v=_PJUcRrzcuw",
+        description: "A video walkthrough of this team website.",
+      },
     ],
   },
 ];

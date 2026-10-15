@@ -29,6 +29,22 @@ const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
 // entries are shown newest first.
 const ENTRIES: JournalEntry[] = [
   {
+    date: "2026-10-13",
+    type: "client",
+    title: "Workflow demo with Jeanne Lovmo",
+    summary:
+      "Demoed two of Nora's workflows to Jeanne, who gave feedback on topic pages, questions, ratings, and filtering.",
+    keyPoints: ["Demoed two of our workflows to the client."],
+    actionItems: [
+      { task: "Include contacts and a webpage for each topic." },
+      { task: "Add a question page and include FAQs there." },
+      { task: "Add a place for researchers to give feedback or leave a comment, with a thumbs up/down or a star rating." },
+      { task: "Let researchers and admins filter for a specific office to view its policies in one topic." },
+      { task: "Use the Ask a Question page/tab for suggestions and FAQs." },
+      { task: "Add a quick rating system and an in-depth ranking system." },
+    ],
+  },
+  {
     date: "2026-10-11",
     type: "team",
     title: "Demo workflows and task split",
