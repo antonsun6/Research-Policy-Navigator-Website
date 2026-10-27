@@ -1,21 +1,23 @@
+import Link from "next/link";
 import PageHeader from "@/components/PageHeader";
 import { STATUS_STYLES, type DeliverableStatus } from "@/lib/deliverables";
 
 type Assignment = {
   title: string;
   status: DeliverableStatus;
-  due: string;
+  due?: string;
   summary?: string;
-  href?: string; // Link to the write-up once it's posted.
+  href?: string; // Page with the write-up once it's posted.
 };
 
 // Course assignments outside the formal deliverables and milestones.
 const ASSIGNMENTS: Assignment[] = [
   {
-    title: "Ethics Assignment",
-    status: "Planned",
-    due: "Due date TBD",
-    summary: "COMP 523 ethics assignment. We'll post our work here once it's done.",
+    title: "Ethics 1",
+    status: "Delivered",
+    summary:
+      "Ethics in Software Engineering: three case studies of unethical software (Uber's Greyball, Amazon's hiring model, and NYC's MyCity chatbot) and what they mean for Nora.",
+    href: "/assignments/ethics-1",
   },
 ];
 
@@ -41,7 +43,9 @@ export default function AssignmentsPage() {
                 >
                   {item.status}
                 </span>
-                <span className="text-xs text-[var(--foreground)]/50">{item.due}</span>
+                {item.due && (
+                  <span className="text-xs text-[var(--foreground)]/50">{item.due}</span>
+                )}
               </div>
               <h3 className="mt-2 font-semibold text-[var(--navy)]">
                 {item.title}
@@ -55,9 +59,7 @@ export default function AssignmentsPage() {
           return (
             <li key={item.title}>
               {item.href ? (
-                <a href={item.href} target="_blank" rel="noopener noreferrer">
-                  {content}
-                </a>
+                <Link href={item.href}>{content}</Link>
               ) : (
                 content
               )}
