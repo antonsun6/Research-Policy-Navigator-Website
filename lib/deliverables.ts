@@ -37,7 +37,7 @@ export const DELIVERABLES: Deliverable[] = [
   {
     id: "D3",
     title: "Test Plan",
-    status: "Planned",
+    status: "In Progress",
     href: "/deliverables/test-plan",
     summary:
       "What we would test with unlimited time and exactly what we will test: automated unit tests, integration and system tests, acceptance testing, environments, and who tests when.",
