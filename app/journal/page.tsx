@@ -1,5 +1,6 @@
 import EmptyState from "@/components/EmptyState";
 import PageHeader from "@/components/PageHeader";
+import { STATUS_STYLES } from "@/lib/deliverables";
 
 type MeetingType = "client" | "coach" | "team";
 
@@ -10,7 +11,8 @@ type JournalEntry = {
   summary: string;
   keyPoints?: string[];
   decisions?: string[];
-  actionItems?: { owner?: string; task: string }[];
+  // status is set once work on an item has started.
+  actionItems?: { owner?: string; task: string; status?: "In Progress" }[];
 };
 
 const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
@@ -29,6 +31,60 @@ const TYPE_STYLES: Record<MeetingType, { label: string; badge: string }> = {
 // entries are shown newest first.
 const ENTRIES: JournalEntry[] = [
   {
+    date: "2026-11-01",
+    type: "team",
+    title: "Tech talk presentation",
+    summary: "Worked on our tech talk presentation about RAG and split it into four parts.",
+    actionItems: [
+      { owner: "Adithi", task: "Create the slides and cover why RAG and when we would use it." },
+      { owner: "Andy", task: "Help create the slides and cover the introduction, different ways to do RAG, and real-world applications." },
+      { owner: "Anton", task: "Cover the technical breakdown of RAG." },
+      { owner: "Jerry", task: "Run the live demo." },
+    ],
+  },
+  {
+    date: "2026-10-29",
+    type: "coach",
+    title: "Coach meeting with Vinir Rai",
+    summary: "Set the plan for the rest of the build: the doc plan next week, the MVP, then the final product.",
+    decisions: [
+      "The MVP is due Thu, Nov 12.",
+      "The final product is due Sun, Nov 15.",
+    ],
+    actionItems: [
+      { owner: "Anton", task: "Complete the doc plan next week." },
+      { owner: "Everyone", task: "Complete the MVP by Thu, Nov 12." },
+      { owner: "Everyone", task: "Complete the final product by Sun, Nov 15." },
+    ],
+  },
+  {
+    date: "2026-10-27",
+    type: "client",
+    title: "Meeting with Jeanne Lovmo and Amanda Cheng",
+    summary:
+      "Met Amanda Cheng, heard where the subtopic framework stands, changed who hosts Nora on CloudApps, and answered Jeanne's questions about the RAG model and the project's future.",
+    keyPoints: [
+      "Amanda Cheng, Director of Operations for the Office of Sponsored Programs, joined the meeting.",
+      "The client is still revising the framework for subtopics.",
+      "Where is Nora being built? It runs on our local servers and computers for now, and we're contacting UNC ITS for permissions and access.",
+      "What happens to the project when we're done? It could be transferred to students in next semester's COMP 523, and the GitHub repository and documents could be forked onto UNC's Git.",
+      "What does the rest of the semester look like? A full working demo, then polishing toward the end of the semester.",
+    ],
+    decisions: [
+      "The Office of the Vice Chancellor for Research will host the CloudApps space instead of us.",
+    ],
+  },
+  {
+    date: "2026-10-22",
+    type: "coach",
+    title: "Coach meeting with Vinir Rai",
+    summary: "Set the game plan for the week: the ethics assignment and the first part of the test plan.",
+    actionItems: [
+      { owner: "Anton", task: "Upload the ethics assignment to the website by Sun, Oct 25." },
+      { owner: "Jerry", task: "Finish the first part of the test plan document by Sun, Oct 25 at midnight." },
+    ],
+  },
+  {
     date: "2026-10-13",
     type: "client",
     title: "Workflow demo with Jeanne Lovmo",
@@ -36,12 +92,12 @@ const ENTRIES: JournalEntry[] = [
       "Demoed two of Nora's workflows to Jeanne, who gave feedback on topic pages, questions, ratings, and filtering.",
     keyPoints: ["Demoed two of our workflows to the client."],
     actionItems: [
-      { task: "Include contacts and a webpage for each topic." },
-      { task: "Add a question page and include FAQs there." },
-      { task: "Add a place for researchers to give feedback or leave a comment, with a thumbs up/down or a star rating." },
-      { task: "Let researchers and admins filter for a specific office to view its policies in one topic." },
-      { task: "Use the Ask a Question page/tab for suggestions and FAQs." },
-      { task: "Add a quick rating system and an in-depth ranking system." },
+      { owner: "Anton", task: "Include contacts and a webpage for each topic." },
+      { owner: "Adithi", task: "Add a question page and include FAQs there." },
+      { owner: "Andy", task: "Add a place for researchers to give feedback or leave a comment, with a thumbs up/down or a star rating.", status: "In Progress" },
+      { owner: "Jerry", task: "Let researchers and admins filter for a specific office to view its policies in one topic.", status: "In Progress" },
+      { owner: "Adithi", task: "Use the Ask a Question page/tab for suggestions and FAQs." },
+      { owner: "Andy", task: "Add a quick rating system and an in-depth ranking system." },
     ],
   },
   {
@@ -92,7 +148,7 @@ const ENTRIES: JournalEntry[] = [
       { owner: "Anton", task: "Assign an owner to every action item in the journal." },
       { owner: "Anton", task: "Add a team meeting to the website." },
       { owner: "Anton", task: "Add an Assignments tab with the ethics assignment." },
-      { owner: "TBD", task: "Email ITS about getting the OKD environment for hosting, CC Vinir." },
+      { owner: "Andy", task: "Email ITS about getting the OKD environment for hosting, CC Vinir." },
       { owner: "Everyone", task: "Prepare a demo video of 2 workflows, due Wed, Oct 14 at 11:59 PM." },
     ],
   },
@@ -135,8 +191,8 @@ const ENTRIES: JournalEntry[] = [
       "The showcase will be for the Steering Group on Nov 19, 3–4 PM, replacing the tentative Oct 30 showcase.",
     ],
     actionItems: [
-      { task: "Plan the Steering Group showcase for Nov 19." },
-      { task: "Decide whether to add subtopics within the policy categories." },
+      { owner: "Adithi", task: "Plan the Steering Group showcase for Nov 19." },
+      { owner: "Jerry", task: "Decide whether to add subtopics within the policy categories." },
     ],
   },
   {
@@ -186,14 +242,14 @@ const ENTRIES: JournalEntry[] = [
       "David Cowig is our contact for UNC Onyen authentication and admin permissions.",
     ],
     actionItems: [
-      { task: "Turn the timeline into a journal of meetings, feedback, and upcoming changes, and update it after every coach and client meeting." },
-      { task: "Put the spec document on the website itself instead of linking to Google Docs." },
-      { task: "Client section: list the client's name, department, and email." },
-      { task: "Team page: list our names, emails, and project roles." },
-      { task: "Move the project introduction from the overview to the home page." },
-      { task: "Fix the site's fonts." },
-      { task: "Make screenshots neater, possibly on a separate page." },
-      { task: "Talk with the client to set more concrete expectations, especially for the UI." },
+      { owner: "Anton", task: "Turn the timeline into a journal of meetings, feedback, and upcoming changes, and update it after every coach and client meeting." },
+      { owner: "Anton", task: "Put the spec document on the website itself instead of linking to Google Docs." },
+      { owner: "Adithi", task: "Client section: list the client's name, department, and email." },
+      { owner: "Andy", task: "Team page: list our names, emails, and project roles." },
+      { owner: "Jerry", task: "Move the project introduction from the overview to the home page." },
+      { owner: "Adithi", task: "Fix the site's fonts." },
+      { owner: "Andy", task: "Make screenshots neater, possibly on a separate page." },
+      { owner: "Jerry", task: "Talk with the client to set more concrete expectations, especially for the UI." },
     ],
   },
 ];
@@ -287,6 +343,13 @@ export default function JournalPage() {
                             </span>
                           )}
                           {item.task}
+                          {item.status && (
+                            <span
+                              className={`ml-2 whitespace-nowrap rounded-full px-2 py-0.5 text-xs font-medium ${STATUS_STYLES[item.status]}`}
+                            >
+                              {item.status}
+                            </span>
+                          )}
                         </li>
                       ))}
                     </ul>
