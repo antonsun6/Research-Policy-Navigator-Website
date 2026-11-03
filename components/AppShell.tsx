@@ -56,7 +56,7 @@ export default function AppShell({
 
   return (
     <>
-      <header className="sticky top-0 z-50 flex h-14 items-center gap-3 bg-[var(--navy)] px-4 shadow-[0_1px_0_rgb(255_255_255/0.06),0_4px_16px_-8px_rgb(13_31_58/0.5)]">
+      <header className="sticky top-0 z-50 flex h-14 print:hidden items-center gap-3 bg-[var(--navy)] px-4 shadow-[0_1px_0_rgb(255_255_255/0.06),0_4px_16px_-8px_rgb(13_31_58/0.5)]">
         <button
           type="button"
           onClick={() => setOpen(!isOpenNow())}
@@ -90,12 +90,12 @@ export default function AppShell({
       <div
         onClick={() => setOpen(false)}
         aria-hidden="true"
-        className={`fixed inset-0 top-14 z-30 bg-[var(--navy-deep)]/40 transition-opacity ${backdrop}`}
+        className={`fixed inset-0 top-14 z-30 print:hidden bg-[var(--navy-deep)]/40 transition-opacity ${backdrop}`}
       />
 
       <aside
         id="site-sidebar"
-        className={`fixed bottom-0 left-0 top-14 z-40 w-64 overflow-y-auto bg-[var(--navy)] transition-transform duration-200 ${sidebarPosition}`}
+        className={`fixed bottom-0 left-0 top-14 z-40 w-64 print:hidden overflow-y-auto bg-[var(--navy)] transition-transform duration-200 ${sidebarPosition}`}
       >
         <nav className="flex flex-col gap-1 p-3">
           {TABS.map((tab) => {
@@ -123,7 +123,7 @@ export default function AppShell({
       </aside>
 
       <div
-        className={`flex min-h-[calc(100vh-3.5rem)] flex-col transition-[padding] duration-200 ${contentOffset}`}
+        className={`flex min-h-[calc(100vh-3.5rem)] flex-col transition-[padding] duration-200 print:min-h-0 print:pl-0 ${contentOffset}`}
       >
         {children}
       </div>

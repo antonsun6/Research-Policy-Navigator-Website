@@ -29,7 +29,7 @@ export const DELIVERABLES: Deliverable[] = [
   {
     id: "D2",
     title: "Design Document",
-    status: "Planned",
+    status: "Delivered",
     href: "/deliverables/design-document",
     summary:
       "A guide for future developers: architecture diagram, code repository and module structure, data definitions, and the reasoning behind our design decisions.",

@@ -8,8 +8,10 @@ export default function DeliverablesLayout({
 }>) {
   return (
     <div className="flex flex-col gap-10">
-      <PageHeader eyebrow="Deliverables" title="What we've shipped" />
-      <DeliverablesSubNav />
+      <div className="flex flex-col gap-10 print:hidden">
+        <PageHeader eyebrow="Deliverables" title="What we've shipped" />
+        <DeliverablesSubNav />
+      </div>
       {children}
     </div>
   );
