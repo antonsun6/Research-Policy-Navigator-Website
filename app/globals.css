@@ -43,3 +43,25 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Printing (and the Design Document PDF): white page, no shadows, colors kept. */
+@media print {
+  @page {
+    size: Letter;
+    margin: 14mm 13mm;
+  }
+  body {
+    background: #fff;
+  }
+  html {
+    scroll-behavior: auto;
+  }
+  .card-surface {
+    box-shadow: none;
+  }
+  .design-doc {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+    font-size: 13px;
+  }
+}

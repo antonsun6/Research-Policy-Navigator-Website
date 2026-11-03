@@ -23,10 +23,10 @@ export default function RootLayout({
     <html lang="en" className={geist.variable} suppressHydrationWarning>
       <body className="min-h-screen">
         <AppShell>
-          <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center">
+          <main className="mx-auto w-full max-w-6xl flex-1 px-6 py-14 text-center print:max-w-none print:p-0">
             {children}
           </main>
-          <footer className="bg-[var(--navy-deep)] py-6 text-center text-xs text-white/60">
+          <footer className="bg-[var(--navy-deep)] print:hidden py-6 text-center text-xs text-white/60">
             Team A · COMP 523 · UNC Chapel Hill
           </footer>
         </AppShell>
