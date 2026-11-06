@@ -45,7 +45,7 @@ export const DELIVERABLES: Deliverable[] = [
   {
     id: "D4",
     title: "User Manual",
-    status: "Planned",
+    status: "In Progress",
     href: "/deliverables/user-manual",
     summary:
       "Our documentation plan, plus guides for researchers using Nora and administrators deploying and managing it, with how-to videos for our client.",
