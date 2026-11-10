@@ -125,6 +125,14 @@ export const MILESTONES: Deliverable[] = [
     summary:
       "How Nora's code, hosting, and accounts pass to UNC Research at the end of the semester.",
   },
+  {
+    id: "M9",
+    title: "MVP Scope",
+    status: "In Progress",
+    href: "/deliverables/mvp",
+    summary:
+      "The D1 requirements narrowed to what the client asked for, and who builds each remaining workflow.",
+  },
 ];
 
 export function findDeliverable(id: string): Deliverable {
