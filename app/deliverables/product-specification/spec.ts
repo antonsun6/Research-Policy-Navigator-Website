@@ -204,38 +204,43 @@ const FUNCTIONAL: SpecGroup[] = [
         title: "Document Version History",
         text: "The system may keep a history of changes to each document's metadata.",
       },
+      {
+        id: "F22",
+        title: "Admin List Management",
+        text: "Administrators may add and remove other administrators by Onyen from a Users & Roles page, instead of the list being set at deployment.",
+      },
     ],
   },
   {
     priority: "Improbable",
     items: [
       {
-        id: "F22",
+        id: "F23",
         title: "Built-In Multi-Factor Auth",
         text: "The system will not implement its own multi-factor authentication; that remains the job of UNC's SSO provider.",
       },
       {
-        id: "F23",
+        id: "F24",
         title: "Live Knowledge Base Sync",
         text: "The system will not sync automatically with the Research Policy Repository; administrators import and update documents.",
       },
       {
-        id: "F24",
+        id: "F25",
         title: "Multi-Language Support",
         text: "The system will not support languages other than English.",
       },
       {
-        id: "F25",
+        id: "F26",
         title: "Auto-Published FAQs",
         text: "The system will not publish FAQ entries without administrator review.",
       },
       {
-        id: "F26",
+        id: "F27",
         title: "Predictive Analytics",
         text: "The system will not provide predictive analytics or machine-learning recommendations for guidance gaps.",
       },
       {
-        id: "F27",
+        id: "F28",
         title: "Enterprise System Integration",
         text: "The system will not integrate with IRB, COI, or other enterprise research systems; this is a future enhancement beyond the semester.",
       },
@@ -328,12 +333,12 @@ const INTERFACES: SpecGroup[] = [
       {
         id: "I1",
         title: "Researcher Home",
-        text: "Browse Topics, Search Policies & Guidance, and Ask a Question as three equal cards, a grid of the nine topics, and left navigation: Home, Ask a Question, Search Policies, Browse Topics, FAQs, Saved, and Contact Compliance.",
+        text: "Browse Topics, Search Policies & Guidance, and Ask a Question as three equal cards, a grid of the nine topics, a right rail (popular topics, saved items, and a Need Help panel pointing to the responsible offices), and left navigation: Home, Ask a Question, Search Policies, Browse Topics, FAQs, Saved, Help & Support, and Contact Compliance.",
       },
       {
         id: "I2",
         title: "Answer Panel",
-        text: "The answer with numbered citations, a References list linking to each policy and section, the AI disclaimer, helpful/not-helpful and save controls, and, when Nora can't answer, a referral panel with the responsible office's contact details.",
+        text: "The answer with numbered citations, a References list linking to each policy and section, a confidence indicator, the AI disclaimer, helpful/not-helpful and save controls, and, when Nora can't answer, a referral panel with the responsible office's contact details.",
       },
       {
         id: "I3",
@@ -348,7 +353,7 @@ const INTERFACES: SpecGroup[] = [
       {
         id: "I5",
         title: "Admin Content Pages",
-        text: "Left navigation (Overview, Policy Library, Topics, FAQs, Analytics & Reports) with pages to import, review, publish, edit, and archive documents, manage topics and subtopics, and write FAQs.",
+        text: "Left navigation (Overview, Policy Library, Topics, Content Management, Analytics & Reports, and Users & Roles once F22 is built) with pages to import, review, publish, edit, and archive documents, manage topics and subtopics, and write FAQs.",
       },
       {
         id: "I6",
@@ -363,7 +368,7 @@ const INTERFACES: SpecGroup[] = [
       {
         id: "I8",
         title: "Embedding & Reranking Models",
-        text: "Models that turn policy text and questions into vectors for retrieval and rescore the top matches. They run on Nora's own server, so policy text and questions don't leave it at this step.",
+        text: "Models that turn policy text and questions into vectors for retrieval and rescore the top matches. Like the LLM, they sit behind an interface, so they can run on Nora's own server or through a hosted API, whichever UNC approves.",
       },
     ],
   },
