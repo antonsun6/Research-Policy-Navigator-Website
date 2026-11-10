@@ -40,12 +40,12 @@ export const CONSTRAINTS: Constraint[] = [
   {
     title: "Sign in with Onyen",
     text: "Researchers and admins log in with their UNC Onyen. Production SSO (Shibboleth) needs UNC ITS access, so the semester build uses a mock login that models the Onyen flow.",
-    source: "Client kickoff, Sep 15; spec F1–F3",
+    source: "Client kickoff, Sep 15; spec F1",
   },
   {
     title: "Curated, approved data only",
     text: "Answers must be grounded in fewer than 200 curated documents from the UNC Policy Knowledge Base, with citations. No confidential records and no live link to IRB, COI, or other enterprise systems.",
-    source: "Client kickoff, Sep 15; spec NF5",
+    source: "Client kickoff, Sep 15; spec NF1",
   },
   {
     title: "AI providers need UNC approval",
@@ -73,7 +73,7 @@ export const COMPONENTS: PlatformComponent[] = [
         chosen: true,
         pros: [
           "Frontend and backend can each use the best language for the job (TypeScript for UI, Python for AI)",
-          "Clean JSON API boundary (spec I7) that is easy to test and document",
+          "Clean JSON API boundary (spec I6) that is easy to test and document",
           "Each half ships as its own container, which suits OpenShift",
         ],
         cons: [
@@ -107,7 +107,7 @@ export const COMPONENTS: PlatformComponent[] = [
       },
     ],
     rationale:
-      "A browser-based React single-page app talks to a FastAPI server over JSON, and the server talks to PostgreSQL and the external AI APIs. The frontend only ever calls relative /api paths, forwarded by Vite in development and by nginx in production, so there is no CORS setup. This split lets us keep the AI work in Python while the UI uses mainstream React tooling. There is no specific hardware or OS target: Nora runs in any modern desktop or mobile browser (spec NF1).",
+      "A browser-based React single-page app talks to a FastAPI server over JSON, and the server talks to PostgreSQL and the external AI APIs. The frontend only ever calls relative /api paths, forwarded by Vite in development and by nginx in production, so there is no CORS setup. This split lets us keep the AI work in Python while the UI uses mainstream React tooling. There is no specific hardware or OS target: Nora runs in any modern desktop or mobile browser (spec NF8).",
   },
   {
     id: "languages",
@@ -391,7 +391,7 @@ export const COMPONENTS: PlatformComponent[] = [
       },
     ],
     rationale:
-      "Not decided yet: this depends on which providers UNC approves, and we have asked the client. Until then all LLM calls go through one provider interface in the backend, so swapping providers is a configuration change and tests never call a real API. Claude is our working default for development (spec I8).",
+      "Not decided yet: this depends on which providers UNC approves, and we have asked the client. Until then all LLM calls go through one provider interface in the backend, so swapping providers is a configuration change and tests never call a real API. Claude is our working default for development (spec I7).",
   },
   {
     id: "embeddings",
@@ -545,7 +545,7 @@ export const COMPONENTS: PlatformComponent[] = [
       },
     ],
     rationale:
-      "Dictated by the client. The semester build uses a mock login that models Onyen (spec F3), and production will use UNC Shibboleth SSO, likely a proxy in front of the app that passes identity in headers. Either way the backend reads the user's role from our own users and roles tables, and the login provider sits behind an interface so the swap doesn't touch the rest of the app. Per our coach, auth comes near the end of October.",
+      "Dictated by the client. The semester build uses a mock login that models Onyen (spec F1), and production will use UNC Shibboleth SSO, likely a proxy in front of the app that passes identity in headers. Either way the backend reads the user's role from our own users and roles tables, and the login provider sits behind an interface so the swap doesn't touch the rest of the app. Per our coach, auth comes near the end of October.",
   },
   {
     id: "hosting",
@@ -584,7 +584,7 @@ export const COMPONENTS: PlatformComponent[] = [
         name: "Vercel / Render / Railway",
         url: "https://render.com",
         pros: [
-          "Fast setup with generous hobby tiers for demos (spec NF10)",
+          "Fast setup with generous hobby tiers for demos",
         ],
         cons: [
           "Hobby tiers aren't meant for production; paid plans after handoff",
