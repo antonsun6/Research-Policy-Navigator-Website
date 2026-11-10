@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { SPEC_SECTIONS, type Priority } from "./spec";
 
 const PRIORITY_DOTS: Record<Priority, string> = {
@@ -27,15 +26,10 @@ export default function ProductSpecificationPage() {
           interfaces for Nora. Requirements are
           prioritized as Definite, Perhaps, or Improbable.
         </p>
-        <p className="text-sm text-[var(--foreground)]/60">
-          Narrowed for the MVP on Nov 10, 2026: see{" "}
-          <Link
-            href="/deliverables/mvp"
-            className="font-medium text-[var(--navy)] underline underline-offset-2"
-          >
-            MVP Scope
-          </Link>
-          .
+        <p className="mx-auto max-w-2xl text-sm text-[var(--foreground)]/60">
+          Revised Nov 10, 2026 to match the Link proposal and the client&apos;s
+          follow-up: overlapping items merged, each requirement made checkable,
+          and subtopics, usage logging, and the full dashboard added.
         </p>
 
         <nav className="mt-2 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm">
