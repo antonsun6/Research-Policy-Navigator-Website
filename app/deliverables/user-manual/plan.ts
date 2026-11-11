@@ -187,9 +187,9 @@ export const DOCS_BY_USER: UserDocs[] = [
     outline: {
       title: "Deployment & Operations Guide outline",
       items: [
-        "System architecture overview (React frontend, FastAPI backend, PostgreSQL/Supabase, Claude API, embedding API)",
+        "System architecture overview (React frontend, FastAPI backend, PostgreSQL with pgvector, the LLM provider, the embedding and reranking models)",
         "Software dependencies and versions",
-        "Accounts and keys required (Supabase, Claude API, embedding API) and how to obtain them",
+        "Accounts and keys required (the LLM provider, and any hosted embedding model) and how to obtain them",
         "Environment variables and configuration",
         "Step-by-step deployment to a new environment (target: UNC Carolina CloudApps)",
         "Redeploying, restarting, or refreshing the system",

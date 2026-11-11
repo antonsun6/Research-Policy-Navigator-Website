@@ -143,7 +143,7 @@ export default function ArchitectureDiagramPage() {
             },
             {
               title: "Third-party AI services",
-              text: "The LLM and embedding providers run on their own servers. Each call crosses the internet, which is why an answer takes seconds, not milliseconds (spec NF8).",
+              text: "The LLM and embedding providers run on their own servers. Each call crosses the internet, which is why an answer takes seconds, not milliseconds (spec NF5).",
             },
           ].map((card) => (
             <div key={card.title} className="rounded-2xl card-surface p-5 text-left">

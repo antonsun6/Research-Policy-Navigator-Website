@@ -151,7 +151,7 @@ export const SECTIONS: Section[] = [
                 ],
                 [
                   "Weak answers were indistinguishable from good ones",
-                  "Confidence indicator and admin tracking of low-confidence and unanswered questions (NF9, F18)",
+                  "Confidence indicator and admin tracking of low-confidence and unanswered questions (I2, F11)",
                 ],
                 ["Problems persisted after users reported them", "Answer feedback reviewed by admins"],
               ],
