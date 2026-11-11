@@ -107,7 +107,7 @@ const FUNCTIONAL: SpecGroup[] = [
       {
         id: "F3",
         title: "Browse by Topic & Subtopic",
-        text: "Researchers shall browse the nine topics, then a topic's documents, then a document page showing its summary, owning office, and official Research Policy Repository link. Subtopics (tags defined by the Link) shall filter a topic's documents, and each document shall list related policies that share a subtopic.",
+        text: "Researchers shall browse the nine topics, then a topic's documents, then a document page showing its summary, owning office, and official Research Policy Repository link. Each policy shall show its subtopics (up to five of the 77 tags the Link defined, shared across all topics); selecting a subtopic shall list every policy with it from any topic, and each document shall list related policies that share a subtopic.",
       },
       {
         id: "F4",
