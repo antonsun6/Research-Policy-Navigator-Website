@@ -120,7 +120,7 @@ export const MILESTONES: Deliverable[] = [
   {
     id: "M8",
     title: "Client Handoff Plan",
-    status: "Planned",
+    status: "In Progress",
     href: "/deliverables/client-handoff-plan",
     summary:
       "How Nora's code, hosting, and accounts pass to UNC Research at the end of the semester.",
