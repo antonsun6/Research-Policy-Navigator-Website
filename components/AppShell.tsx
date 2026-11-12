@@ -10,6 +10,7 @@ const TABS = [
   { href: "/schedule", label: "Scheduling & Timeline" },
   { href: "/journal", label: "Meetings & Decisions" },
   { href: "/deliverables", label: "Deliverables" },
+  { href: "/checklist", label: "Requirements Checklist" },
   { href: "/assignments", label: "Assignments" },
   { href: "/rules", label: "Team Rules" },
   { href: "/links", label: "Related Links" },
