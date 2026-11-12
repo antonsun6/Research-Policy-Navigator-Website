@@ -84,15 +84,33 @@ const EXTRA_EVENTS: TimelineEvent[] = [
     type: "team",
   },
   {
+    date: "2026-11-11",
+    time: "TBD",
+    title: "Team meeting",
+    type: "team",
+  },
+  {
     date: "2026-11-12",
     time: "TBD",
     title: "MVP due",
     type: "event",
   },
   {
+    date: "2026-11-12",
+    time: "TBD",
+    title: "Client handoff and live demo with requirements checklist due",
+    type: "event",
+  },
+  {
     date: "2026-11-15",
     time: "TBD",
     title: "Final product due",
+    type: "event",
+  },
+  {
+    date: "2026-11-15",
+    time: "TBD",
+    title: "Final video submission due",
     type: "event",
   },
   {
