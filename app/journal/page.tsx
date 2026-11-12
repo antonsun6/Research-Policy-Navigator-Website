@@ -41,7 +41,6 @@ const ENTRIES: JournalEntry[] = [
       "Sign-in (F1) and the three entry points (F2) were already done, and NF9 (deployable on CloudApps) was met.",
       "Each pair builds its first workflow first, and adds its endpoints and tables to the API and database docs before coding so backend and frontend can work in parallel.",
     ],
-    decisions: ["The MVP deadline moved from Thu, Nov 12 to Sun, Nov 15."],
     actionItems: [
       { owner: "Jerry", task: "Ask (RAG), backend and frontend: answers with citations and low-confidence referrals (F5, F6)." },
       { owner: "Jerry", task: "Frontend for feedback and saved items (F7, F9) and for usage logging and the admin dashboard (F10, F11)." },
@@ -74,7 +73,7 @@ const ENTRIES: JournalEntry[] = [
     type: "coach",
     title: "Coach meeting with Vinir Rai",
     summary:
-      "Followed up on the doc plan and set the final deadlines: the client handoff and a live demo with a requirements checklist on Nov 12, and the final video submission on Nov 15.",
+      "Followed up on the doc plan and set the final deadlines: the client handoff and a live demo with a requirements checklist on Nov 12, and the formal submission on Nov 15.",
     keyPoints: [
       "Doc plan from Oct 29: the README, an FAQ, the fall break demo video, and a Getting Started section for users and developers.",
       "The doc plan and the design document were both due tonight, Nov 5 at 11:59 PM.",
@@ -86,7 +85,7 @@ const ENTRIES: JournalEntry[] = [
       { owner: "Andy", task: "Submit the doc plan by midnight tonight, Nov 5." },
       { owner: "Anton", task: "Plan and deliver the client handoff, due Thu, Nov 12." },
       { owner: "Everyone", task: "Mini live demo, with a checklist of all functional and non-functional requirements on the website, due Thu, Nov 12." },
-      { owner: "Everyone", task: "Final video submission after our coach meeting, due Sun, Nov 15." },
+      { owner: "Everyone", task: "Formal submission, due Sun, Nov 15." },
     ],
   },
   {
