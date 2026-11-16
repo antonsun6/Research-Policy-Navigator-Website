@@ -41,7 +41,7 @@ const USER_STORIES: SpecItem[] = [
   {
     id: "US4",
     title: "Unanswerable Question Referral",
-    text: "As a researcher, if my question can't be answered confidently from approved sources, I want the Navigator to tell me that and direct me to the appropriate compliance office, rather than guessing.",
+    text: "As a researcher, if my question can't be answered confidently from approved sources, I want the Navigator to tell me that and direct me to the right office (Research Compliance Services for a research question, the University Policy Office for anything else), rather than guessing.",
   },
   {
     id: "US5",
@@ -122,7 +122,7 @@ const FUNCTIONAL: SpecGroup[] = [
       {
         id: "F6",
         title: "Low-Confidence Referral",
-        text: "When the retrieved sources can't support a confident answer, the system shall not generate one. It shall say so and show the responsible office and its contact details as the next step.",
+        text: "When the retrieved sources can't support a confident answer, the system shall not generate one. It shall say so and refer a research question to Research Compliance Services, and a question that isn't about research to the University Policy Office with a link to all UNC policies. An answer shall list the offices that own its cited policies and Research Compliance Services as contacts.",
       },
       {
         id: "F7",
@@ -338,7 +338,7 @@ const INTERFACES: SpecGroup[] = [
       {
         id: "I2",
         title: "Answer Panel",
-        text: "The answer with numbered citations, a References list linking to each policy and section, a confidence indicator, the AI disclaimer, helpful/not-helpful and save controls, and, when Nora can't answer, a referral panel with the responsible office's contact details.",
+        text: "The answer with numbered citations, a References list linking to each policy and section, a confidence indicator, the AI disclaimer, helpful/not-helpful and save controls, the contact details of the cited policies' offices and Research Compliance Services, and, when Nora can't answer, a referral panel with the office to contact (Research Compliance Services, or the University Policy Office for questions outside research).",
       },
       {
         id: "I3",
