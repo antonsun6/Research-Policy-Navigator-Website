@@ -141,16 +141,11 @@ const FUNCTIONAL: SpecGroup[] = [
       },
       {
         id: "F10",
-        title: "Usage Logging",
-        text: "The system shall record topic views, document views, searches (terms and result count), and questions (outcome and citations) as the data behind the admin dashboard.",
+        title: "Usage Logging & Analytics Dashboard",
+        text: "The system shall record topic views, document views, searches (terms and result count), and questions (outcome and citations). These logs are recorded only: the dashboard never displays them, whether as individual entries or as a list. For a chosen date range, the dashboard shall show only analytics computed from the logs: users and visits; Browse, Search, and Ask counts; most-viewed topics and policies; most-cited resources; common search terms; searches with no results; questions asked most often; questions referred or not answered confidently; the share of answers rated helpful; and trends over time. These analytics shall be aggregates that never identify an individual researcher, and the dashboard shall export them as CSV.",
       },
       {
         id: "F11",
-        title: "Admin Dashboard",
-        text: "For a chosen date range, the dashboard shall show users and visits; Browse, Search, and Ask counts; most-viewed topics and policies; most-cited resources; common search terms; searches with no results; questions asked most often; questions referred or not answered confidently; the share of answers rated helpful; and trends over time. It shall show aggregates only, never individual researchers, and export its data as CSV.",
-      },
-      {
-        id: "F12",
         title: "Content Management",
         text: "Administrators shall add a Repository document by its link (imported as a draft), review and publish it, edit its topic, subtopics, owning office, and authoritative flag, and archive or restore it. Only active, authoritative documents are used in Browse, Search, and Ask. The Repository remains the authoritative text, so documents aren't edited inside Nora.",
       },
@@ -160,52 +155,52 @@ const FUNCTIONAL: SpecGroup[] = [
     priority: "Perhaps",
     items: [
       {
-        id: "F13",
+        id: "F12",
         title: "Plain-Language Search Matching",
         text: "Search may match everyday terms to policy language (for example, \"lab notebook\" to research data), reusing the Ask pipeline's retrieval.",
       },
       {
-        id: "F14",
+        id: "F13",
         title: "Review Dates",
         text: "Documents may carry review-due dates, with the dashboard listing documents overdue for review.",
       },
       {
-        id: "F15",
+        id: "F14",
         title: "Conflicting-Content Flags",
         text: "The system may flag conflicting, outdated, or duplicate content to its owning office, once the Link decides how such content should be handled.",
       },
       {
-        id: "F16",
+        id: "F15",
         title: "Dashboard Filters",
         text: "The dashboard may filter its measures by topic.",
       },
       {
-        id: "F17",
+        id: "F16",
         title: "UNC SSO Integration",
         text: "The system may sign users in through UNC's single sign-on (Onyen), once UNC ITS grants access.",
       },
       {
-        id: "F18",
+        id: "F17",
         title: "Related Questions",
         text: "The system may suggest related or follow-up questions after an answer.",
       },
       {
-        id: "F19",
+        id: "F18",
         title: "Multi-Turn Follow-Up",
         text: "The system may answer a follow-up question that refers to the previous answer.",
       },
       {
-        id: "F20",
+        id: "F19",
         title: "Question Grouping",
         text: "The dashboard may group similar questions, rather than exact matches, to surface FAQ candidates for administrator review.",
       },
       {
-        id: "F21",
+        id: "F20",
         title: "Document Version History",
         text: "The system may keep a history of changes to each document's metadata.",
       },
       {
-        id: "F22",
+        id: "F21",
         title: "Admin List Management",
         text: "Administrators may add and remove other administrators by Onyen from a Users & Roles page, instead of the list being set at deployment.",
       },
@@ -215,32 +210,32 @@ const FUNCTIONAL: SpecGroup[] = [
     priority: "Improbable",
     items: [
       {
-        id: "F23",
+        id: "F22",
         title: "Built-In Multi-Factor Auth",
         text: "The system will not implement its own multi-factor authentication; that remains the job of UNC's SSO provider.",
       },
       {
-        id: "F24",
+        id: "F23",
         title: "Live Knowledge Base Sync",
         text: "The system will not sync automatically with the Research Policy Repository; administrators import and update documents.",
       },
       {
-        id: "F25",
+        id: "F24",
         title: "Multi-Language Support",
         text: "The system will not support languages other than English.",
       },
       {
-        id: "F26",
+        id: "F25",
         title: "Auto-Published FAQs",
         text: "The system will not publish FAQ entries without administrator review.",
       },
       {
-        id: "F27",
+        id: "F26",
         title: "Predictive Analytics",
         text: "The system will not provide predictive analytics or machine-learning recommendations for guidance gaps.",
       },
       {
-        id: "F28",
+        id: "F27",
         title: "Enterprise System Integration",
         text: "The system will not integrate with IRB, COI, or other enterprise research systems; this is a future enhancement beyond the semester.",
       },
@@ -348,12 +343,12 @@ const INTERFACES: SpecGroup[] = [
       {
         id: "I4",
         title: "Admin Dashboard",
-        text: "Summary tiles, a trend-over-time chart, top topics, policies, search terms and questions, referred and low-confidence questions, feedback results, a date-range selector, and an Export CSV control.",
+        text: "Summary tiles, a trend-over-time chart, top topics, policies, search terms and questions, referred and low-confidence questions, feedback results, a date-range selector, and an Export CSV control. It shows analytics only and never lists individual usage log entries.",
       },
       {
         id: "I5",
         title: "Admin Content Pages",
-        text: "Left navigation (Overview, Policy Library, Topics, Content Management, Analytics & Reports, and Users & Roles once F22 is built) with pages to import, review, publish, edit, and archive documents, manage topics and subtopics, and write FAQs.",
+        text: "Left navigation (Overview, Policy Library, Topics, Content Management, Analytics & Reports, and Users & Roles once F21 is built) with pages to import, review, publish, edit, and archive documents, manage topics and subtopics, and write FAQs.",
       },
       {
         id: "I6",

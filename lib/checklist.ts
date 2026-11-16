@@ -22,15 +22,15 @@ export const CHECKLIST_STATUS: Record<string, ChecklistStatus> = {
   F8: { done: true },
   F9: { done: true },
   F10: { done: true },
-  F11: { done: true },
-  F12: {
+  F11: {
     done: false,
     note: "Admin pages are done; changing a document doesn't re-run ingestion for Ask yet.",
   },
 
   // Functional, Perhaps
-  F13: { done: false },
-  F14: { done: false, note: "Documents have a review-due date; the dashboard doesn't list overdue ones yet." },
+  F12: { done: false },
+  F13: { done: false, note: "Documents have a review-due date; the dashboard doesn't list overdue ones yet." },
+  F14: { done: false },
   F15: { done: false },
   F16: { done: false },
   F17: { done: false },
@@ -38,7 +38,6 @@ export const CHECKLIST_STATUS: Record<string, ChecklistStatus> = {
   F19: { done: false },
   F20: { done: false },
   F21: { done: false },
-  F22: { done: false },
 
   // Non-functional, Definite
   NF1: { done: true },
